@@ -1,0 +1,449 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="bootstrap5/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /*背景颜色*/
+        #dcolor {
+            background-color: rgb(227, 225, 202);
+             }
+        .box {
+            width:150%;
+            height: 25vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .imgList {
+            
+            animation:rolling 18s linear infinite;
+            position: absolute;
+            display: flex;
+        }
+        @keyframes rolling {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+ 
+  </head>
+  <body >
+    <!-- 第一个界面，全局展开两边不留空白，背景色淡黄，图片重叠且旋转一定角度 -->
+  <div >
+    <div id="dcolor" style="margin-bottom:5vw;height:80vw">
+        <h1 style="font-family: arial;color: black;font-size: 15vw;text-align: center; margin: auto;">Little Fat Boy</h1>
+        <p style="  font-family: arial; font-size: 1.5vw;text-align: left;  margin: auto;"> 
+            Recipes,About,Cookbook,Book Your,Shop,Search</p>
+        <div id="dcolor" style="margin:auto">
+<!-- 只设置高度不设置宽度并且object-fit:cover就可以保证图片等比缩放并且完全显示 -->
+<!-- css的transform可控制旋转，border控制边框，而outline在border外层 -->
+            <img id='img1' src="img/BlackA.jpg" alt="黑桃A1" style="height:50vw;position:absolute;object-fit: cover;
+            margin-top:3vw;margin-left:3vw;z-index: 1;transform:rotate(-3deg);border:1vw solid white;outline: dashed;outline-width:1px" >
+            <!-- 设置的长度和宽度并不会导致图象被拉伸，而是在范围内等比缩放，实现自适应 -->
+            <img id='img2' src="img/BlackA.png" alt="黑桃A2" style="height:50vw;position:absolute;object-fit: cover;
+                margin-top:1vw;margin-left:33vw;z-index: 2;transform:rotate(3deg);border:1vw solid white;outline: dashed;outline-width:1px">
+            <img id='img3' src="img/BlackA.jpg" alt="黑桃A3" style="height:50vw;position:absolute;object-fit: cover;
+                margin-top:3vw;margin-left:58vw;z-index: 3;transform:rotate(-3deg);border:1vw solid white;outline: dashed;outline-width:1px">
+            <!-- 图一和图三的读取路径是一样的所以要用id把他们区分开，否则会导致两张图重叠 -->
+
+        </div>
+    </div>
+  </div>
+  <!-- 第二个界面，一段文字加上一张大图 需要有页边距，暂定2vw-->
+  <div style="margin-left:2vw;margin-right: 2vw;">
+    <!-- 设置虚线L -->
+    <hr style="border:1px dashed #000; height:1px;background-color: white;opacity:0.5">
+    <h2 style="font-family: arial;
+                color: black;
+                font-size: 5vw;
+                text-align: left;margin-bottom:8vw
+                ">My Cookbook,First Generation:
+        <br> Recipes From My Taiwanese-
+        <br> American Home is available
+        <br> Wherever cookbooks are sold!
+    </h2>
+ 
+    <p style="text-align:center">
+        <img id='img4' src="img/bilibili.JPG" alt="黑桃A3" style="width:100%;margin-bottom:10vw">
+    </p>
+    <br>
+    <br>
+    
+</div>
+    <!-- 第三个界面：一个标题外加两大段文字 ，页边距-->
+    <div style="margin-left:2vw;margin-right: 2vw;margin-bottom:8vw">
+        <hr style="border:1px dashed #000; height:1px;background-color: white;opacity:0.5">
+        <h2 style="font-family: arial;
+                    color: black;
+                    font-size: 5vw;
+                    text-align: left;
+                margin: auto;">Recipes and stories tha explore
+            <br>what it means to be Asian
+            <br> American.
+        </h2>
+        <h3 style="
+        width:80%;
+        color: black;
+        font-family: serif;
+        font-size: 1.5vw;
+        text-align: left;
+  ">图像和文本是当今两种主要的信息载体,其中图像具有生动形象的特点,而文本概括性强,能够以简练的形式传递信息。图像字幕生成旨在让计算机自动地使用文本对给定的图像加以描述,在图像检索、人机对话等应用中被广泛使用。 当前,网络中包含了数以十亿计的图片,为我们提供更加丰富娱乐和信息。图像和文本是当今两种主要的信息载体,其中图像具有生动形象的特点,而文本概括性强,能够以简练的形式传递信息。图像字幕生成旨在让计算机自动地使用文本对给定的图像加以描述,在图像检索、人机对话等应用中被广泛使用。 当前,网络中包含了数以十亿计的图片,为我们提供更加丰富娱乐和信息。
+        </h3>
+        <br>
+        <br>
+        <h3 style="
+        width:80%;
+        color: black;
+        font-family: serif;
+        font-size: 1.5vw;
+        text-align: left;
+  ">图像和文本是当今两种主要的信息载体,其中图像具有生动形象的特点,而文本概括性强,能够以简练的形式传递信息。图像字幕生成旨在让计算机自动地使用文本对给定的图像加以描述,在图像检索、人机对话等应用中被广泛使用。 当前,网络中包含了数以十亿计的图片,为我们提供更加丰富娱乐和信息。图像和文本是当今两种主要的信息载体,其中图像具有生动形象的特点,而文本概括性强,能够以简练的形式传递信息。图像字幕生成旨在让计算机自动地使用文本对给定的图像加以描述,在图像检索、人机对话等应用中被广泛使用。 当前,网络中包含了数以十亿计的图片,为我们提供更加丰富娱乐和信息。
+        </h3>
+        <p> <br></p>
+
+        
+    </div>
+    <!-- 第四个界面，页边距，栅格布局3×1 ，一张大图，左右布局文字加按钮
+    页面最大的div已经留过页边距了，里面的class使用container-fluid就可以
+    -->
+    <div style="margin-left:2vw;margin-right: 2vw;">
+        <hr style="border:1px dashed #000; height:1px;background-color: white;opacity:0.5">
+        <h2 style="font-family: arial;
+        color: black;
+        font-size: 2.5vw;
+        text-align: left;
+        margin-bottom:2vw;
+        "> What's Cooking This Week?
+        <!-- text-indent:2em; -->
+        </h2>
+        <div class="container-fluid" style="width:100%;margin-bottom:8vw">
+            <div class="row"style="width:100%;margin-bottom:8vw">
+                <div class="col-md-4"><img src="img/BlackA.jpg"style="width:90%;" >
+                    <p style="font-family: arial;color: black;font-size: 2vw;text-align: left;"><b>这是随便找来的图片描述</b></p>
+                    <p style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;font-size: 1vw;text-align: left;
+                       "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>
+                <div class="col-md-4"><img src="img/BlackA.jpg"style="width:90%" >
+                    <p style="font-family: arial;color: black;font-size: 2vw;text-align: left;"><b>这是随便找来的图片描述</b></p>
+                    <p style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;font-size: 1vw;text-align: left;
+                           "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>
+                <div class="col-md-4"><img src="img/BlackA.jpg"style="width:90%" >
+                    <p style="font-family: arial;color: black;font-size: 2vw;text-align: left;"><b>这是随便找来的图片描述</b></p>
+                    <p style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;font-size: 1vw;text-align: left;
+                           "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>
+            </div>
+            <p style="text-align:center;margin-bottom: 3vw;">
+                <img id='img8' src="img/bilibili.JPG" alt="bilibili" style="width:100%;">
+            </p>
+            <div class="row"style="margin-bottom:8vw">
+                <div class="col-md-8"><p style="font-family: arial;color: black;font-size: 2vw;text-align: left;"> 这是随便找来的图片描述</p>
+                    <p style="font-family: arial;color: black;font-size: 1.5vw;text-align: left;"> 这是随便找来的图片描述...........<br>这是随便找来的图片描述.............................................
+                    </p> </div>
+                <div class="col-md-4"style="text-align: right"><button type="button" style="height:4vw;font-size: 1.5vw;background-color:white;width:20vw;margin-top:3vw"><b>Read The Story</b></button>
+                </div>
+                <!-- <div class=""row>
+                    <div class="col-md-4"> 
+                        <p style="font-family: arial;color: black;font-size: 2vw;text-align: left;"> 这是随便找来的图片描述</p>
+                        <p style="font-family: arial;color: black;font-size: 1.5vw;text-align: left;"> 这是随便找来的图片描述...........<br>这是随便找来的图片描述.............................................
+                        </p>
+                    </div>
+                    <div class="col-md-4"style="background-color:blue">222 </div>
+                    <div class="col-md-4"style="background-color:blue">111 </div>
+                    <div class="col-md-3"> <button type="button" style="height:4vw;font-size: 1.5vw;background-color:white;align-items: center;">Read The Story</button>
+                </div> -->
+        </div>
+    </div>
+ </div>
+    <!-- 第五个界面，页边距3×2布局 -->
+    <div  style="margin-left:2vw;margin-right: 2vw;">
+        <hr style="border:1px dashed #000; height:1px;background-color: white;opacity:0.5">
+        <h2 style="font-family: arial;color: black;font-size: 2.5vw;text-align: left;margin-bottom: 2vw;"><b>Dumplings you'll love</b>
+        </h2>
+        <p style="text-align:center;margin-bottom: 8vw;">
+            <img id='img9' src="img/bilibili.JPG" alt="bilibili" style="width:100%;">
+        </p>
+        <div class="container"style="margin-bottom:8vw">
+            <div class="row">
+                <div class="col-md-4"><img src="img/BlackA.jpg"style="width:80%;margin-left:2.5vw;" >
+                    <p style="font-family: arial;color: black;font-size: 2vw;text-align: left;margin-left:2.5vw;"><b>这是随便找来的图片描述</b></p>
+                    <p style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;margin-left:2.5vw;font-size: 1vw;text-align: left;
+                       "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>
+                <div class="col-md-4"><img src="img/BlackA.jpg"style="width:80%;margin-left:2vw;" >
+                    <p style="font-family: arial;color: black;font-size: 2vw;text-align: left;margin-left:2.5vw;"><b>这是随便找来的图片描述</b></p>
+                    <p style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;margin-left:2.5vw;font-size: 1vw;text-align: left;
+                           "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>
+                <div class="col-md-4"><img src="img/BlackA.jpg"style="width:80%;margin-left:2.5vw;" >
+                    <p style="font-family: arial;color: black;font-size: 2vw;text-align: left;margin-left:2.5vw;"><b>这是随便找来的图片描述</b></p>
+                    <p style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;margin-left:2.5vw;font-size: 1vw;text-align: left;
+                           "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"><img src="img/BlackA.jpg"style="width:80%;margin-left:2.5vw" >
+                    <p style="font-family: arial;color: black;font-size: 2vw;text-align: left;margin-left:2.5vw"><b>这是随便找来的图片描述</b></p>
+                    <p style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;margin-left:2.5vw;font-size: 1vw;text-align: left;
+                       "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>
+                <div class="col-md-4"><img src="img/BlackA.jpg"style="width:80%;margin-left:2.5vw;" >
+                    <p style="font-family: arial;color: black;font-size: 2vw;text-align: left;margin-left:2.5vw;"><b>这是随便找来的图片描述</b></p>
+                    <p style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;margin-left:2.5vw;font-size: 1vw;text-align: left;
+                           "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>
+                <div class="col-md-4"><img src="img/BlackA.jpg"style="width:80%;margin-left:2.5vw;" >
+                    <p style="font-family: arial;color: black;font-size: 2vw;text-align: left;margin-left:2.5vw;"><b>这是随便找来的图片描述</b></p>
+                    <p style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;margin-left:2.5vw;font-size: 1vw;text-align: left;
+                           "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>
+            </div>
+
+        </div>
+        <hr style="border:1px dashed #000; height:1px;background-color: white;opacity:0.5">
+
+    </div>
+
+    <!-- 第六个页面，2×3布局 -->
+    <div style="margin-left:2vw;margin-right: 2vw;">
+        <h2 style="font-family: arial;color: black;font-size: 3vw;text-align: left;">Latest recipes
+        </h2>
+        <div class="container-fluid"style="margin-bottom:8vw">
+            <div class="row">
+                <div class="col-md-6"style="margin-bottom:4vw">
+                    <div class="row v-align align-items-center"><!-- 垂直对齐-中间对齐-行的对齐方式 -->
+                        <div class="col-md-4" style="padding:0px 0px">
+                            <img src="img/center.JPG"style="width:70%;" >
+                        </div>
+                        <div class="col-md-8"style="padding:0px 0px">
+                                <p style="font-family: arial;color: black;font-size: 1vw;text-align: left;"><b>这是随便找来的图片描述</b></p>
+                                <p  style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;font-size: 1vw;text-align: left;
+                                "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>                           
+                        </div>
+                </div>
+                <div class="col-md-6"style="margin-bottom:4vw">
+                    <div class="row v-align align-items-center"><!-- 垂直对齐-中间对齐-行的对齐方式 -->
+                        <div class="col-md-4" style="padding:0px 0px">
+                            <img src="img/center.JPG"style="width:70%;" >
+                        </div>
+                        <div class="col-md-8"style="padding:0px 0px">
+                                <p style="font-family: arial;color: black;font-size: 1vw;text-align: left;"><b>这是随便找来的图片描述</b></p>
+                                <p  style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;font-size: 1vw;text-align: left;
+                                "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>                           
+                        </div>
+                </div>                  
+            </div>
+            <div class="row">
+                <div class="col-md-6"style="margin-bottom:4vw">
+                    <div class="row v-align align-items-center"><!-- 垂直对齐-中间对齐-行的对齐方式 -->
+                        <div class="col-md-4" style="padding:0px 0px">
+                            <img src="img/center.JPG"style="width:70%;" >
+                        </div>
+                        <div class="col-md-8"style="padding:0px 0px">
+                                <p style="font-family: arial;color: black;font-size: 1vw;text-align: left;"><b>这是随便找来的图片描述</b></p>
+                                <p  style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;font-size: 1vw;text-align: left;
+                                "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>                           
+                        </div>
+                </div>
+                <div class="col-md-6"style="margin-bottom:4vw">
+                    <div class="row v-align align-items-center"><!-- 垂直对齐-中间对齐-行的对齐方式 -->
+                        <div class="col-md-4" style="padding:0px 0px">
+                            <img src="img/center.JPG"style="width:70%;" >
+                        </div>
+                        <div class="col-md-8"style="padding:0px 0px">
+                                <p style="font-family: arial;color: black;font-size: 1vw;text-align: left;"><b>这是随便找来的图片描述</b></p>
+                                <p  style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;font-size: 1vw;text-align: left;
+                                "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>                           
+                        </div>
+                </div>                  
+            </div>
+            <div class="row">
+                <div class="col-md-6"style="margin-bottom:4vw">
+                    <div class="row v-align align-items-center"><!-- 垂直对齐-中间对齐-行的对齐方式 -->
+                        <div class="col-md-4" style="padding:0px 0px">
+                            <img src="img/center.JPG"style="width:70%;" >
+                        </div>
+                        <div class="col-md-8"style="padding:0px 0px">
+                                <p style="font-family: arial;color: black;font-size: 1vw;text-align: left;"><b>这是随便找来的图片描述</b></p>
+                                <p  style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;font-size: 1vw;text-align: left;
+                                "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>                           
+                        </div>
+                </div>
+                <div class="col-md-6"style="margin-bottom:4vw">
+                    <div class="row v-align align-items-center"><!-- 垂直对齐-中间对齐-行的对齐方式 -->
+                        <div class="col-md-4" style="padding:0px 0px">
+                            <img src="img/center.JPG"style="width:70%;" >
+                        </div>
+                        <div class="col-md-8"style="padding:0px 0px">
+                                <p style="font-family: arial;color: black;font-size: 1vw;text-align: left;"><b>这是随便找来的图片描述</b></p>
+                                <p  style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;font-size: 1vw;text-align: left;
+                                "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>                           
+                        </div>
+                </div>                  
+            </div>
+            
+        </div>
+        <hr style="border:1px dashed #000; height:1px;background-color: white;opacity:0.5">
+    </div>
+     <!-- 第七个界面，页边距，2×1布局和3×1 -->
+     <div  style="margin-left:2vw;margin-right: 2vw;">
+        <h2 style="font-family: arial;color: black;font-size: 3vw;text-align: left;"><b>Most popular recipes this week</b>
+        </h2>
+        
+        <div class="container"style="margin-bottom:12vw">
+            <div class="row"style="margin-bottom:8vw">
+                <div class="col-md-8"><img src="img/BlackA.jpg"style="width:85%;margin-left:2.5vw;" >
+                    <p style="font-family: arial;color: black;font-size: 1.5vw;text-align: left;margin-left:2.5vw;"><b>这是随便找来的图片描述</b></p>
+                    <p style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;margin-left:2.5vw;font-size: 1vw;text-align: left;
+                       "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>
+                <div class="col-md-4"><img src="img/BlackA.jpg"style="width:85%;margin-left:2vw;" >
+                    <p style="font-family: arial;color: black;font-size: 1.5w;text-align: left;margin-left:2.5vw;"><b>这是随便找来的图片描述</b></p>
+                    <p style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;margin-left:2.5vw;font-size: 1vw;text-align: left;
+                           "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>
+              
+            </div>
+            <div class="row">
+                <div class="col-md-4"><img src="img/BlackA.jpg"style="width:80%;margin-left:2.5vw" >
+                    <p style="font-family: arial;color: black;font-size: 2vw;text-align: left;margin-left:2.5vw"><b>这是随便找来的图片描述</b></p>
+                    <p style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;margin-left:2.5vw;font-size: 1vw;text-align: left;
+                       "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>
+                <div class="col-md-4"><img src="img/BlackA.jpg"style="width:80%;margin-left:2.5vw;" >
+                    <p style="font-family: arial;color: black;font-size: 2vw;text-align: left;margin-left:2.5vw;"><b>这是随便找来的图片描述</b></p>
+                    <p style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;margin-left:2.5vw;font-size: 1vw;text-align: left;
+                           "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>
+                <div class="col-md-4"><img src="img/BlackA.jpg"style="width:80%;margin-left:2.5vw;" >
+                    <p style="font-family: arial;color: black;font-size: 2vw;text-align: left;margin-left:2.5vw;"><b>这是随便找来的图片描述</b></p>
+                    <p style="font-family: arial;width:90%;word-wrap:break-word;word-break: break-all;margin-left:2.5vw;font-size: 1vw;text-align: left;
+                           "> 这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述这是随便找来的图片描述</p> </div>
+            </div>
+
+        </div>
+       
+        <hr style="border:1px dashed #000; height:1px;background-color: white;opacity:0.5">
+
+    </div>
+    <!-- 第八个界面轮播图 -->
+    
+     <div class="container box" style="margin-bottom:12vw;margin-left:0px;height: 30vw;max-width: 96vw"><!--container有最大长度限制970px -->
+        <h2 style="font-family: arial;color: black;font-size: 3vw;text-align: left;margin-left: 2vw;">BROWSE BY CATEFORY</h2>
+        <div class="imgList"style="width=100vw">
+                <div  style="margin-left:5vw">
+                    <p style="font-family: arial;
+                    color: black;font-size: 1vw;text-align: left;width:100%;margin-top:1vw; margin-bottom:1vw"><b>图片1</b> 
+                    <p style="text-align:left">
+                    <img id='img5' class="top" src="img/Black2.png" alt="黑桃2" style="float: left;height: 20vw;"></div>
+                <div  style="margin-left:5vw">
+                    <p style="font-family: arial;
+                    color: black;font-size: 1vw;text-align: left;width:100%;margin-top:1vw; margin-bottom:1vw"><b>图片2</b> 
+                    <p style="text-align:left">
+                    <img id='img5' class="top" src="img/Black3.png" alt="黑桃3" style="float: left;height: 20vw;">
+                </div>
+                <div style="margin-left:5vw">
+                    <p style="font-family: arial;
+                    color: black;font-size: 1vw;text-align: left;width:100%;margin-top:1vw; margin-bottom:1vw"><b>图片3</b> 
+                    <p style="text-align:left">
+                    <img id='img5' class="top" src="img/Black2.png" alt="黑桃2" style="float: left;height: 20vw;">
+                </div>
+                <div  style="margin-left:5vw">
+                    <p style="font-family: arial;
+                    color: black;font-size: 1vw;text-align: left;width:100%;margin-top:1vw; margin-bottom:1vw"><b>图片4</b> 
+                    <p style="text-align:left">
+                    <img id='img5' class="top" src="img/Black3.png" alt="黑桃3" style="float: left;height: 20vw;">
+                </div>
+                <div style="margin-left:5vw">
+                    <p style="font-family: arial;
+                    color: black;font-size: 1vw;text-align: left;width:100%;margin-top:1vw; margin-bottom:1vw"><b>图片5</b> 
+                    <p style="text-align:left">
+                    <img id='img5' class="top" src="img/Black2.png" alt="黑桃2" style="float: left;height: 20vw;">
+                </div>
+                <div  style="margin-left:5vw">
+                    <p style="font-family: arial;
+                    color: black;font-size: 1vw;text-align: left;width:100%;margin-top:1vw; margin-bottom:1vw"><b>图片6</b> 
+                    <p style="text-align:left">
+                    <img id='img5' class="top" src="img/Black3.png" alt="黑桃3" style="float: left;height: 20vw;">
+                </div>
+                <div  style="margin-left:5vw">
+                    <p style="font-family: arial;
+                    color: black;font-size: 1vw;text-align: left;width:100%;margin-top:1vw; margin-bottom:1vw"><b>图片1</b> 
+                    <p style="text-align:left">
+                    <img id='img5' class="top" src="img/Black2.png" alt="黑桃2" style="float: left;height: 20vw;">
+                </div>
+                <div  style="margin-left:5vw">
+                    <p style="font-family: arial;
+                    color: black;font-size: 1vw;text-align: left;width:100%;margin-top:1vw; margin-bottom:1vw"><b>图片2</b> 
+                    <p style="text-align:left">
+                    <img id='img5' class="top" src="img/Black3.png" alt="黑桃3" style="float: left;height: 20vw;">
+                </div>
+                <div  style="margin-left:5vw">
+                    <p style="font-family: arial;
+                    color: black;font-size: 1vw;text-align: left;width:100%;margin-top:1vw; margin-bottom:1vw"><b>图片3</b> 
+                    <p style="text-align:left">
+                    <img id='img5' class="top" src="img/Black2.png" alt="黑桃2" style="float: left;height: 20vw;">
+                </div>
+                <div  style="margin-left:5vw">
+                    <p style="font-family: arial;
+                    color: black;font-size: 1vw;text-align: left;width:100%;margin-top:1vw; margin-bottom:1vw"><b>图片4</b> 
+                    <p style="text-align:left">
+                    <img id='img5' class="top" src="img/Black3.png" alt="黑桃3" style="float: left;height: 20vw;">
+                </div>
+                <div style="margin-left:5vw">
+                    <p style="font-family: arial;
+                    color: black;font-size: 1vw;text-align: left;width:100%;margin-top:1vw; margin-bottom:1vw"><b>图片5</b> 
+                    <p style="text-align:left">
+                    <img id='img5' class="top" src="img/Black2.png" alt="黑桃2" style="float: left;height: 20vw;">
+                </div>
+                <div  style="margin-left:5vw">
+                    <p style="font-family: arial;
+                    color: black;font-size: 1vw;text-align: left;width:100%;margin-top:1vw; margin-bottom:1vw"><b>图片6</b> 
+                    <p style="text-align:left">
+                    <img id='img5' class="top" src="img/Black3.png" alt="黑桃3" style="float: left;height: 20vw;">
+                </div>
+
+                    
+        
+   
+        </div>
+    </div>
+    <!-- 第九个界面 -->
+    <div >
+        <div id="dcolor" style="margin-bottom:0px;width: 100%;">
+            <div class="container"></div>
+                <div class="row"style="margin-bottom:3vw">
+                    <div class="col-md-7">
+                        <p id="dcolor"style="font-size: 1.5vw;height:1vw;margin-top:2vw;margin-left:2vw;margin-bottom:2vw">Fresh updates straight to your inbox</p>
+                        <HR style="height:1px;border:none;margin-left:2vw; border-top:2px dotted #000000;opacity:0.5;background-color: white;">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text"style="height:4vw;width:100%;font-size: 2vw;margin-top:1vw;background-color: transparent;
+                        border-top:0px;
+                        border-left:0px;
+                        border-right:0px;" placeholder="Emile address" />
+                    </div>
+                    <div class="col-md-2"style="text-align: left">
+                        <button type="button" style="
+                        height: 4vw;width:90%;font-size: 2vw;margin-top:1vw;background-color: transparent;padding:0px">Subscribe</button>
+                    </div>
+                </div>
+                <div class="row"> 
+                    <div class="col-md-9"style="height:3vw">
+                       <p style="margin-left:2vw;font-size: 1vw;">❤Little Fat Boy 2022</p>   
+                    </div>
+                    <div class="col-md-1"style="text-align: center;padding:0px;text-decoration:underline;font-size: 1vw;">
+                        Instagram
+                    </div>
+                    <div class="col-md-1"style="text-align: center;padding:0px;text-decoration:underline;font-size: 1vw;">
+                        Youtube
+                    </div>
+                    <div class="col-md-1"style="text-align: center;padding:0px;text-decoration:underline;font-size: 1vw;">
+                        Email
+                    </div>
+                </div>
+                   
+
+                        
+                </div>
+     </div>
+    
+</body>
+</html>
